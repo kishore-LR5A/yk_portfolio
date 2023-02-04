@@ -16,7 +16,7 @@ function NavLink({ idx, text, scrollTo }: NavLinkProps) {
   };
   return (
     <button
-      className="text-light_slate hover:text-green font-sf_mono"
+      className="text-lightest_slate hover:text-green font-sf_mono"
       onClick={handleScrollTo}
     >
       <span className="text-green">{`0${idx}`}. </span>

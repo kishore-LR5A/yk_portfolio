@@ -1,14 +1,11 @@
-"use client";
+
+import Hero from "@/components/sections/Hero";
+
 export default function Home() {
   return (
-    <main className="p-[30px]">
+    <main className="flex justify-center items-center flex-col">
       {/* Hero section */}
-      <section
-        id="Hero"
-        className="h-screen flex flex-col justify-center items-center text-white"
-      >
-        <h1 className="text-3xl text-slate font-calibri">Hero.</h1>
-      </section>
+      <Hero />
 
       {/* about section */}
       <section id="About" className="h-screen flex justify-center items-center">

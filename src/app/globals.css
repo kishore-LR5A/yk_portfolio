@@ -7,6 +7,7 @@
   margin: 0em;
   padding: 0em;
   box-sizing: border-box;
+  line-height: 1;
 }
 /* Firefox */
 * {
@@ -41,4 +42,8 @@
 @font-face {
   font-family: "Calibri";
   src: url("../../assets/fonts/Calibri-Regular.ttf");
+}
+@font-face {
+  font-family: "CalibriBold";
+  src: url("../../assets/fonts/Calibri-Bold.TTF");
 }

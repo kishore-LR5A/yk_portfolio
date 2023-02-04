@@ -22,6 +22,7 @@ module.exports = {
       fontFamily: {
         sf_mono: ["SfMono", "sans"],
         calibri: ["Calibri", "sans-serif"],
+        calibri_bold: ["CalibriBold", "sans-serif"],
       },
     },
   },
