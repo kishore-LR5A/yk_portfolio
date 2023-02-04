@@ -1,6 +1,8 @@
-import Navbar from "@/compoonents/Navbar";
+"use client";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
-
+import { store } from "redux/store";
+import { Provider as ReduxProvider } from "react-redux";
 export default function RootLayout({
   children,
 }: {
@@ -14,10 +16,10 @@ export default function RootLayout({
       */}
       <head />
       <body className="bg-navy min-h-screen">
-        <>
+        <ReduxProvider store={store}>
           <Navbar />
           {children}
-        </>
+        </ReduxProvider>
       </body>
     </html>
   );
