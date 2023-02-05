@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      theme: {
+        fluidTypography: {},
+      },    
       colors: {
         navy: "#0a192f",
         dark_navy: "#020c1b",
@@ -26,5 +29,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-fluid-typography")],
 };

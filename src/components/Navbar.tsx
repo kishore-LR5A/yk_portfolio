@@ -27,7 +27,7 @@ function Navbar() {
   // mobile navbar reference
   const navRef = useRef<HTMLDivElement>(null);
   return (
-    <div className="h-[80px] px-[50px] flex justify-between items-center w-full fixed top-0 left-0">
+    <div className="h-[80px] px-[50px] flex justify-between items-center w-full fixed top-0 left-0 backdrop-blur-3xl shadow-md z-50">
       {/* logo */}
       <Image
         src="/logo.png"

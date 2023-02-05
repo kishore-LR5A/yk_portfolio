@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section
       id="Hero"
-      className="h-screen flex flex-col justify-center items-start text-white w-[4/5] sm:w-[3/5] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[150px]"
+      className="h-screen flex flex-col justify-center items-start text-white w-full"
     >
       {/* <h1 className="text-3xl text-slate font-calibri">Hero.</h1> */}
       <p className="text-green text-[16px] sm:text-[20px] font-sf_mono mb-4">
