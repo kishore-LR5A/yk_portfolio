@@ -7,7 +7,7 @@ import FeatherIcon from "feather-icons-react";
 import { useReduxSelector, useReduxDispatch } from "redux/hooks";
 import { toggleNav } from "redux/nav/navSlice";
 import Link from "next/link";
-import MobileNavLink from "./MobileNavLink";
+import MobileNavLink from "./mobile/MobileNavLink";
 
 function Navbar() {
   const isOpen = useReduxSelector((state) => state.nav.isOpen);
