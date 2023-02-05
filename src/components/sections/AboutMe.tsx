@@ -1,6 +1,7 @@
 import { Icon } from "@ailibs/feather-react-ts";
 import Link from "next/link";
 import Image from "next/image";
+import NumberedHeading from "../NumberedHeading";
 
 function AboutMe() {
   return (
@@ -10,16 +11,7 @@ function AboutMe() {
       className="flex flex-col justify-center items-start py-[100px] "
     >
       {/* numbered heading */}
-      <div className="flex justify-start items-center">
-        <p className="text-lightest_slate text-[24px] sm:text-[28px] md:text-[34px] font-calibri_bold">
-          <span className="text-green font-sf_mono mr-[10px] text-[16px] sm:text-[22px] md:text-[26px]">
-            01.
-          </span>
-          About me
-        </p>
-        {/* divider */}
-        <div className="h-[1px] w-full md:w-[300px] bg-lightest_navy ml-[20px] flex-1 sm:flex-none"></div>
-      </div>
+      <NumberedHeading number="01" title="About Me" />
       <div className="flex flex-col md:flex-row justify-between pt-5 space-y-3 md:space-x-3 ">
         {/* about me text */}
         <div className="font-calibri tracking-wide text-[14px] sm:text-[20px] text-slate flex flex-col space-y-4 w-full sm:w-3/5 ">
@@ -108,6 +100,10 @@ const techStack: TechStack[] = [
   {
     tech: "FastAPI",
     link: "https://fastapi.tiangolo.com/",
+  },
+  {
+    tech: "Dart",
+    link: "https://dart.dev/",
   },
   {
     tech: "Ethereum",

@@ -1,5 +1,6 @@
 "use client";
 import AboutMe from "@/components/sections/AboutMe";
+import Experience from "@/components/sections/Experience";
 import Hero from "@/components/sections/Hero";
 
 export default function Home() {
@@ -14,12 +15,7 @@ export default function Home() {
       {/* about section */}
       <AboutMe />
       {/* Experience section */}
-      <section
-        id="Experience"
-        className="h-screen flex justify-center items-center"
-      >
-        <h1 className="text-3xl text-slate font-calibri">Experience.</h1>
-      </section>
+      <Experience />
       {/* Work section */}
       <section id="Work" className="h-screen flex justify-center items-center">
         <h1 className="text-3xl text-slate font-calibri">Work.</h1>
