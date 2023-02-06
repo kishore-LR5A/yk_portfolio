@@ -1,11 +1,12 @@
 "use client";
 import AboutMe from "@/components/sections/AboutMe";
+import Contact from "@/components/sections/Contact";
 import Experience from "@/components/sections/Experience";
 import Hero from "@/components/sections/Hero";
 import Work from "@/components/sections/Work";
 
 export default function Home() {
-  const element = document.getElementById("Work");
+  const element = document.getElementById("Contact");
   if (element) {
     element.scrollIntoView({ behavior: "smooth" });
   }
@@ -20,12 +21,7 @@ export default function Home() {
       {/* Work section */}
       <Work />
       {/* Contact section */}
-      <section
-        id="Contact"
-        className="h-screen flex justify-center items-center"
-      >
-        <h1 className="text-3xl text-slate font-calibri">Contact.</h1>
-      </section>
+      <Contact />
     </main>
   );
 }

@@ -47,3 +47,9 @@
   font-family: "CalibriBold";
   src: url("../../assets/fonts/Calibri-Bold.TTF");
 }
+
+@layer components {
+  .green-btn {
+    @apply text-green cursor-pointer border border-green text-[16px] py-4 px-5 rounded-[4px] hover:bg-green/10;
+  }
+}
