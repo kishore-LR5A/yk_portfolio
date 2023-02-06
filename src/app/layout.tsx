@@ -4,6 +4,7 @@ import "./globals.css";
 import { store } from "redux/store";
 import { Provider as ReduxProvider } from "react-redux";
 import Footer from "@/components/Footer";
+import FloatingLinks from "@/components/FloatingLinks";
 export default function RootLayout({
   children,
 }: {
@@ -21,6 +22,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <FloatingLinks />
         </ReduxProvider>
       </body>
     </html>
