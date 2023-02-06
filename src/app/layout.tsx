@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { store } from "redux/store";
 import { Provider as ReduxProvider } from "react-redux";
+import Footer from "@/components/Footer";
 export default function RootLayout({
   children,
 }: {
@@ -19,6 +20,7 @@ export default function RootLayout({
         <ReduxProvider store={store}>
           <Navbar />
           {children}
+          <Footer />
         </ReduxProvider>
       </body>
     </html>
