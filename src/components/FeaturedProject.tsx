@@ -35,7 +35,7 @@ function FeaturedProject({
         {/* project title */}
         <Link
           href={link}
-          className="text-slate hover:text-green text-[28px] font-calibri_bold"
+          className="text-lightest_slate hover:text-green text-[28px] font-calibri_bold"
         >
           {title}
         </Link>

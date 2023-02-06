@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FeaturedProject from "../FeaturedProject";
 import MobileFeaturedProject from "../mobile/MobileFeaturedProject";
 import NumberedHeading from "../NumberedHeading";
+import Project, { ProjectProps } from "../Project";
 
 function Work() {
+  // projects data
+  const [projects, setProjects] = React.useState<ProjectProps[]>(
+    otherProjects.slice(6)
+  );
+  // show more projects button state
+  const [showMore, setShowMore] = React.useState(false);
+  useEffect(() => {
+    // set projects based on showMore state
+    if (showMore) {
+      setProjects(otherProjects);
+    } else {
+      setProjects(otherProjects.slice(6));
+    }
+  }, [showMore]);
+  // show more projects button click handler
+  const handleShowMoreToggle = () => {
+    setShowMore(!showMore);
+  };
+
   return (
     <section
       id="Work"
@@ -37,6 +57,39 @@ function Work() {
               image={project.image}
             />
           ))}
+        </div>
+        {/* other projects */}
+        <div className="flex flex-col justify-center items-center space-y-1 pt-[150px]">
+          <h1 className="fluid-xl text-lightest_slate font-calibri_bold">
+            Other Noteworthy Projects
+          </h1>
+          <p className="fluid-sm font-sf_mono text-green">view the archive</p>
+        </div>
+        {/* iterate over projects */}
+        <div className="flex flex-col justify-center items-center space-y-6">
+          <div
+            // flex justify-center items-center space-x-5
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-[50px]"
+            id="projects"
+          >
+            {projects.map((project, idx) => (
+              <Project
+                key={idx}
+                title={project.title}
+                techStack={project.techStack}
+                description={project.description}
+                githubLink={project.githubLink}
+                websiteLink={project.websiteLink}
+              />
+            ))}
+          </div>
+          {/* show more/less button */}
+          <button
+            className="text-green cursor-pointer border border-green text-[16px] py-4 px-5 rounded-[4px] hover:bg-green/10"
+            onClick={handleShowMoreToggle}
+          >
+            {showMore ? "Show Less" : "Show More"}
+          </button>
         </div>
       </div>
     </section>
@@ -72,5 +125,96 @@ const featuredProjects = [
     link: "https:bombdashboard.com",
     image: "/featured_project.png",
     invert: false,
+  },
+];
+
+export const otherProjects: ProjectProps[] = [
+  {
+    title: "Project 1",
+    techStack: ["React", "Next.js", "Tailwind CSS"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+    githubLink: "https://nextjs.org/",
+    websiteLink: "",
+  },
+  {
+    title: "Project 2",
+    techStack: ["React", "Next.js", "Tailwind CSS"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+    githubLink: "",
+    websiteLink: "https://nextjs.org/",
+  },
+  {
+    title: "Project 3",
+    techStack: ["React", "Next.js", "Tailwind CSS"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt,.",
+    githubLink: "https://nextjs.org/",
+    websiteLink: "https://nextjs.org/",
+  },
+  {
+    title: "Project 1",
+    techStack: ["React", "Next.js", "Tailwind CSS"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+    githubLink: "https://nextjs.org/",
+    websiteLink: "",
+  },
+  {
+    title: "Project 2",
+    techStack: ["React", "Next.js", "Tailwind CSS"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+    githubLink: "",
+    websiteLink: "https://nextjs.org/",
+  },
+  {
+    title: "Project 3",
+    techStack: ["React", "Next.js", "Tailwind CSS"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt,.",
+    githubLink: "https://nextjs.org/",
+    websiteLink: "https://nextjs.org/",
+  },
+  {
+    title: "Project 1",
+    techStack: ["React", "Next.js", "Tailwind CSS"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+    githubLink: "https://nextjs.org/",
+    websiteLink: "",
+  },
+  {
+    title: "Project 2",
+    techStack: ["React", "Next.js", "Tailwind CSS"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+    githubLink: "",
+    websiteLink: "https://nextjs.org/",
+  },
+  {
+    title: "Project 3",
+    techStack: ["React", "Next.js", "Tailwind CSS"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt,.",
+    githubLink: "https://nextjs.org/",
+    websiteLink: "https://nextjs.org/",
+  },
+  {
+    title: "Project 2",
+    techStack: ["React", "Next.js", "Tailwind CSS"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+    githubLink: "",
+    websiteLink: "https://nextjs.org/",
+  },
+  {
+    title: "Project 3",
+    techStack: ["React", "Next.js", "Tailwind CSS"],
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt,.",
+    githubLink: "https://nextjs.org/",
+    websiteLink: "https://nextjs.org/",
   },
 ];
