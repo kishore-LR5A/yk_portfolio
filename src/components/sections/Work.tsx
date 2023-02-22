@@ -7,7 +7,7 @@ import Project, { ProjectProps } from "../Project";
 function Work() {
   // projects data
   const [projects, setProjects] = React.useState<ProjectProps[]>(
-    otherProjects.slice(6)
+    otherProjects.slice(0, 6)
   );
   // show more projects button state
   const [showMore, setShowMore] = React.useState(false);
@@ -16,7 +16,7 @@ function Work() {
     if (showMore) {
       setProjects(otherProjects);
     } else {
-      setProjects(otherProjects.slice(6));
+      setProjects(otherProjects.slice(0, 6));
     }
   }, [showMore]);
   // show more projects button click handler
@@ -69,7 +69,7 @@ function Work() {
         <div className="flex flex-col justify-center items-center space-y-6">
           <div
             // flex justify-center items-center space-x-5
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-[50px]"
+            className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 pt-[50px]"
             id="projects"
           >
             {projects.map((project, idx) => (
@@ -154,7 +154,7 @@ export const otherProjects: ProjectProps[] = [
     websiteLink: "https://nextjs.org/",
   },
   {
-    title: "Project 1",
+    title: "Project 4",
     techStack: ["React", "Next.js", "Tailwind CSS"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
@@ -162,7 +162,7 @@ export const otherProjects: ProjectProps[] = [
     websiteLink: "",
   },
   {
-    title: "Project 2",
+    title: "Project 5",
     techStack: ["React", "Next.js", "Tailwind CSS"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
@@ -170,7 +170,7 @@ export const otherProjects: ProjectProps[] = [
     websiteLink: "https://nextjs.org/",
   },
   {
-    title: "Project 3",
+    title: "Project 6",
     techStack: ["React", "Next.js", "Tailwind CSS"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt,.",
@@ -178,7 +178,7 @@ export const otherProjects: ProjectProps[] = [
     websiteLink: "https://nextjs.org/",
   },
   {
-    title: "Project 1",
+    title: "Project 7",
     techStack: ["React", "Next.js", "Tailwind CSS"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
@@ -186,7 +186,7 @@ export const otherProjects: ProjectProps[] = [
     websiteLink: "",
   },
   {
-    title: "Project 2",
+    title: "Project 8",
     techStack: ["React", "Next.js", "Tailwind CSS"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
@@ -194,7 +194,7 @@ export const otherProjects: ProjectProps[] = [
     websiteLink: "https://nextjs.org/",
   },
   {
-    title: "Project 3",
+    title: "Project 9",
     techStack: ["React", "Next.js", "Tailwind CSS"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt,.",
@@ -202,7 +202,7 @@ export const otherProjects: ProjectProps[] = [
     websiteLink: "https://nextjs.org/",
   },
   {
-    title: "Project 2",
+    title: "Project 10",
     techStack: ["React", "Next.js", "Tailwind CSS"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
@@ -210,7 +210,7 @@ export const otherProjects: ProjectProps[] = [
     websiteLink: "https://nextjs.org/",
   },
   {
-    title: "Project 3",
+    title: "Project 11",
     techStack: ["React", "Next.js", "Tailwind CSS"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt,.",
