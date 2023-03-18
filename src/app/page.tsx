@@ -7,8 +7,8 @@ import Work from "@/components/sections/Work";
 import { Icon } from "@ailibs/feather-react-ts";
 
 export default function Home() {
-  const element = document.getElementById("Hero");
   const onTop = () => {
+    const element = document.getElementById("Hero");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
