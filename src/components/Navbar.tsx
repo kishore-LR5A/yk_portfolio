@@ -8,6 +8,8 @@ import { useReduxSelector, useReduxDispatch } from "redux/hooks";
 import { toggleNav } from "redux/nav/navSlice";
 import Link from "next/link";
 import MobileNavLink from "./mobile/MobileNavLink";
+import { socialMedia } from "./FloatingLinks";
+import { Icon } from "@ailibs/feather-react-ts";
 
 function Navbar() {
   const isOpen = useReduxSelector((state) => state.nav.isOpen);
@@ -90,7 +92,20 @@ function Navbar() {
                 toggleMobileNavbar={toggleMobileNavbar}
               />
             ))}
+            {/* resume button */}
             <Button path="/resume.pdf" text="Resume" variant="sm" />
+            {/* social links */}
+            <div className="flex space-x-3">
+              {socialMedia.map((social, idx) => (
+                <Link key={idx} href={social.link} target="_blank">
+                  <Icon
+                    name={social.name}
+                    size={22}
+                    className="text-light_slate hover:-translate-y-1 hover:text-green transition-all duration-300 cursor-pointer"
+                  />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -29,11 +29,11 @@ function FloatingLinks() {
 }
 
 export default FloatingLinks;
-interface SocialMedia {
+export interface SocialMedia {
   name: SocialMediaIconName;
   link: string;
 }
-const socialMedia: SocialMedia[] = [
+export const socialMedia: SocialMedia[] = [
   {
     name: "github",
     link: "https://github.com/kishore-LR5A",
