@@ -39,7 +39,8 @@ function Work() {
               title={project.title}
               techStack={project.techStack}
               description={project.description}
-              link={project.link}
+              githubLink={project.githubLink}
+              websiteLink={project.websiteLink}
               image={project.image}
               invert={project.invert}
             />
@@ -53,8 +54,8 @@ function Work() {
               title={project.title}
               techStack={project.techStack}
               description={project.description}
-              link={project.link}
-              image={project.image}
+              githubLink={project.githubLink}
+              websiteLink={project.websiteLink}
             />
           ))}
         </div>
@@ -100,121 +101,87 @@ export default Work;
 
 const featuredProjects = [
   {
-    title: "Portfolio",
-    techStack: ["Next.js", "Tailwind_CSS", "Framer_Motion"],
+    title: "Bomb Dashboard",
+    techStack: ["ReactJs", "Tailwind_CSS", "Netlify"],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis soluta nulla molestias! Necessitatibus, natus ratione. Voluptas id consequatur repudiandae nulla, doloremque facere, harum quaerat, minima deleniti repellendus aspernatur quasi ipsum.",
-    link: "https://nextjs.org/",
-    image: "/featured_project.png",
+      "A dashboard integrated in Bomb.money website by aggregating all the data from different pages from overall website. A glimse and overview of all the data in one place.",
+    githubLink:
+      "https://github.com/kishore-LR5A/bomb-dashboard-yaadava_kishore",
+    websiteLink: "https://bomb-dashboard-yaadava-kishore.netlify.app/",
+    image: "/featured/bomb-dashboard.png",
     invert: false,
   },
   {
-    title: "Bomb Dashboard",
-    techStack: ["Next.js", "Tailwind_CSS", "Framer_Motion"],
+    title: "Portfolio",
+    techStack: ["NextJs", "Tailwind_CSS", "Netlify"],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis soluta nulla molestias! Necessitatibus, natus ratione. Voluptas id consequatur repudiandae nulla, doloremque facere, harum quaerat, minima deleniti repellendus aspernatur quasi ipsum.",
-    link: "https:bombdashboard.com",
-    image: "/featured_project.png",
+      "Portfolio website built using Next.js and Tailwind CSS. It is a single page application with a clean and minimalistic UI.",
+    githubLink: "https://github.com/kishore-LR5A/yk_portfolio",
+    websiteLink: "https://portfolio-yaadava-kishore.netlify.app/",
+    image: "/featured/yk_portfolio.png",
     invert: true,
   },
   {
-    title: "Bomb Dashboard",
-    techStack: ["Next.js", "Tailwind_CSS", "Framer_Motion"],
+    title: "Medium Clone",
+    techStack: ["NextJs", "Tailwind_CSS", "SanityCMS"],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis soluta nulla molestias! Necessitatibus, natus ratione. Voluptas id consequatur repudiandae nulla, doloremque facere, harum quaerat, minima deleniti repellendus aspernatur quasi ipsum.",
-    link: "https:bombdashboard.com",
-    image: "/featured_project.png",
+      "A clone of Medium.com, built using Next.js, Sanity and Tailwind CSS. With Sanity, a headless content management system, any frontend can be connected to it.",
+    githubLink: "https://github.com/kishore-LR5A/sanityCMS",
+    websiteLink: "",
+    image: "/featured/medium_clone.png",
     invert: false,
+  },
+  {
+    title: "Edge Detection",
+    techStack: ["Flutter", "Dart", "Sobel_Algorithm"],
+    description:
+      "A flutter mobile app that detects the edges of an image using Sobel algorithm. Image input can be from gallery, camera or even a network URL. It also stores and give a nice preview of all the images that have been processed.",
+    githubLink: "https://github.com/kishore-LR5A/sanityCMS",
+    websiteLink: "",
+    image: "/featured/edge_detection.png",
+    invert: true,
   },
 ];
 
 export const otherProjects: ProjectProps[] = [
   {
-    title: "Project 1",
-    techStack: ["React", "Next.js", "Tailwind CSS"],
+    title: "Encrytped Chat App",
+    techStack: ["NextJs", "FastAPI", "Cryptography"],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
-    githubLink: "https://nextjs.org/",
+      "A chat app built using Next.js and FastAPI. It uses Prince cipher for encryption and decryption. It also has a feature to encrypt and decrypt data we pass. It uses sockets for sending data.",
+    githubLink: "https://github.com/srilekhaK9120/Prince",
     websiteLink: "",
   },
   {
-    title: "Project 2",
-    techStack: ["React", "Next.js", "Tailwind CSS"],
+    title: "Medical Diagnosis App",
+    techStack: ["Next.js", "Tailwind_CSS", "ML"],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
-    githubLink: "",
-    websiteLink: "https://nextjs.org/",
-  },
-  {
-    title: "Project 3",
-    techStack: ["React", "Next.js", "Tailwind CSS"],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt,.",
-    githubLink: "https://nextjs.org/",
-    websiteLink: "https://nextjs.org/",
-  },
-  {
-    title: "Project 4",
-    techStack: ["React", "Next.js", "Tailwind CSS"],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
-    githubLink: "https://nextjs.org/",
+      "A web app that uses machine learning to diagnose the disease based on the symptoms. It uses a dataset from kaggle. The model is trained using a Decision tree classifier.",
+    githubLink: "https://github.com/kishore-LR5A/ds250_medical_diagnosis",
     websiteLink: "",
   },
   {
-    title: "Project 5",
-    techStack: ["React", "Next.js", "Tailwind CSS"],
+    title: "Smart Street Light(SSL) System",
+    techStack: ["Deep_Learning", "Flutter", "ESP32"],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
-    githubLink: "",
-    websiteLink: "https://nextjs.org/",
-  },
-  {
-    title: "Project 6",
-    techStack: ["React", "Next.js", "Tailwind CSS"],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt,.",
-    githubLink: "https://nextjs.org/",
-    websiteLink: "https://nextjs.org/",
-  },
-  {
-    title: "Project 7",
-    techStack: ["React", "Next.js", "Tailwind CSS"],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
-    githubLink: "https://nextjs.org/",
+      "A smart street light system that uses deep learning to detect the presence of a person and turn on the light. It uses a deep learning model to detect the presence of a person or vehichles. It uses ESP32 to control the light.",
+    githubLink: "https://github.com/kishore-LR5A/idp_ssl",
     websiteLink: "",
   },
   {
-    title: "Project 8",
-    techStack: ["React", "Next.js", "Tailwind CSS"],
+    title: "CNN Detection",
+    techStack: ["Deep_Learning", "Jupyter_Notebooks"],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
-    githubLink: "",
-    websiteLink: "https://nextjs.org/",
+      "A deep learning project for detecting CNN generated images. It is a course project for CS550.",
+    githubLink: "https://github.com/kishore-LR5A/ml_cs550",
+    websiteLink: "",
   },
   {
-    title: "Project 9",
-    techStack: ["React", "Next.js", "Tailwind CSS"],
+    title: "Crypto View",
+    techStack: ["Next.js", "Tailwind_CSS", "CoinGecko_API"],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt,.",
-    githubLink: "https://nextjs.org/",
-    websiteLink: "https://nextjs.org/",
-  },
-  {
-    title: "Project 10",
-    techStack: ["React", "Next.js", "Tailwind CSS"],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
-    githubLink: "",
-    websiteLink: "https://nextjs.org/",
-  },
-  {
-    title: "Project 11",
-    techStack: ["React", "Next.js", "Tailwind CSS"],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt,.",
-    githubLink: "https://nextjs.org/",
-    websiteLink: "https://nextjs.org/",
+      "A web app that shows the current price of cryptocurrencies. It uses CoinGecko API to fetch the data.",
+    githubLink: "https://github.com/kishore-LR5A/crypto_view",
+    websiteLink: "",
   },
 ];

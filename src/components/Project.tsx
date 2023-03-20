@@ -16,7 +16,7 @@ function Project({
   websiteLink,
 }: ProjectProps) {
   return (
-    <div className="flex flex-col justify-between space-y-4 bg-[#112240] p-8 hover:-translate-y-2 transition-all duration-200 ease-in-out cursor-pointer">
+    <div className="flex flex-col justify-between space-y-4 bg-[#112240] min-h-[350px] p-8 hover:-translate-y-2 transition-all duration-200 ease-in-out cursor-pointer">
       {/* links */}
       <div className="flex justify-between items-center w-full">
         {/* folder icon */}
@@ -50,13 +50,13 @@ function Project({
         </div>
       </div>
       {/* tech stack */}
-      <div className="flex space-x-2">
+      <p className="flex flex-wrap ">
         {techStack.map((tech, idx) => (
-          <p key={idx} className="text-[12px] text-slate font-sf_mono">
+          <span key={idx} className="text-[12px] text-slate font-sf_mono pb-2 pl-2">
             {tech}
-          </p>
+          </span>
         ))}
-      </div>
+      </p>
     </div>
   );
 }

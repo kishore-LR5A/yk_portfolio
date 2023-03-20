@@ -102,8 +102,8 @@ const techStack: TechStack[] = [
     link: "https://fastapi.tiangolo.com/",
   },
   {
-    tech: "Dart",
-    link: "https://dart.dev/",
+    tech: "Node.js",
+    link: "https://nodejs.org/",
   },
   {
     tech: "Ethereum",

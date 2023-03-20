@@ -5,16 +5,16 @@ interface MobileFeaturedProjectProps {
   title: string;
   techStack: string[];
   description: string;
-  link: string;
-  image: string;
+  githubLink: string;
+  websiteLink: string;
 }
 
 function MobileFeaturedProject({
   title,
   techStack,
   description,
-  link,
-  image,
+  githubLink,
+  websiteLink,
 }: MobileFeaturedProjectProps) {
   return (
     // bg-[url('/featured_project.png')] bg-cover bg-center bg-no-repeat
@@ -40,20 +40,22 @@ function MobileFeaturedProject({
       </div>
       {/* project links */}
       <div className="flex space-x-4">
-        <Link href={link}>
+        <Link href={githubLink}>
           <Icon
             name="github"
             className="hover:text-green cursor-pointer"
             size={22}
           />
         </Link>
-        <Link href={""}>
-          <Icon
-            name="external-link"
-            className="hover:text-green cursor-pointer"
-            size={22}
-          />
-        </Link>
+        {websiteLink.length > 0 && (
+          <Link href={websiteLink}>
+            <Icon
+              name="external-link"
+              className="hover:text-green cursor-pointer"
+              size={22}
+            />
+          </Link>
+        )}
       </div>
     </div>
   );

@@ -44,15 +44,15 @@ const socialMedia: SocialMedia[] = [
   },
   {
     name: "twitter",
-    link: "/",
+    link: "https://twitter.com/yaadava_kishore",
   },
   {
     name: "instagram",
-    link: "/",
+    link: "https://www.instagram.com/kishore_chodipilli/",
   },
   {
     name: "facebook",
-    link: "/",
+    link: "https://www.facebook.com/kishorey.chodipilli",
   },
 ];
 

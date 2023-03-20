@@ -12,7 +12,7 @@ function Experience() {
   return (
     <section
       id="Experience"
-      className="flex justify-start items-center w-full pt-[100px] tracking-wider"
+      className="flex justify-start items-center w-full pt-[100px] tracking-wider md:translate-x-20"
     >
       <div className="flex flex-col w-full space-y-7 text-slate">
         <NumberedHeading number="02" title="Where I've worked" />
@@ -55,36 +55,14 @@ export default Experience;
 const JobCardData: JobCardProps[] = [
   {
     title: "Web3 Developer Intern",
-    company: "Myraid",
-    companyLink: "https://dyeus.co/",
+    company: "Myriad",
+    companyLink: "https://www.linkedin.com/company/myriadco/",
     timespan: "April 2022 - August 2022",
     description: [
       "Worked on client projects using React, Ethers.js, express.js and related technologies in production environment.",
       "Worked on smart contract integration with React using Web3.js and Ethers.js.",
       "Wrote frontend for projects using React from Figma designs. Manage and develop backends of Node.js frameworks.",
     ],
-    techStack: ["React", "Javascript", "Solidity", "SCSS", "Node.js"],
-  },
-  {
-    title: "Software Engineer",
-    company: "Google",
-    companyLink: "https://google.com",
-    timespan: "May 2021 - Present",
-    description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    ],
-    techStack: ["React", "Next.js", "TypeScript", "TailwindCSS"],
-  },
-  {
-    title: "Software Engineer Intern",
-    company: "Facebook",
-    companyLink: "https://facebook.com",
-    timespan: "May 2020 - Aug 2020",
-    description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    ],
-    techStack: ["React", "Next.js", "TypeScript", "TailwindCSS"],
+    techStack: ["React", "Javascript", "Solidity", "SCSS", "Node.js","Ethers.js"],
   },
 ];

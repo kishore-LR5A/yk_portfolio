@@ -7,7 +7,8 @@ interface FeaturedProjectProps {
   title: string;
   techStack: string[];
   description: string;
-  link: string;
+  githubLink: string;
+  websiteLink: string;
   image: string;
   invert: boolean;
 }
@@ -15,10 +16,12 @@ function FeaturedProject({
   title,
   techStack,
   description,
-  link,
+  githubLink,
+  websiteLink,
   image,
   invert,
 }: FeaturedProjectProps) {
+  const link = websiteLink.length > 0 ? websiteLink : githubLink;
   return (
     <div
       className={`relative py-[50px] flex flex-col ${
@@ -63,7 +66,7 @@ function FeaturedProject({
           invert ? "right-0" : "left-0"
         } top-0 bottom-0 cursor-pointer`}
       >
-        <div className="relative w-full ">
+        <div className="relative w-full">
           <div className="hidden lg:block absolute top-0 bottom-0 left-0 right-0 bg-green/10 hover:bg-transparent rounded-[10px] transition-all duration-300 ease-in-out"></div>
           <img
             className="md:w-[300px] lg:w-[600px] rounded-[10px]"
@@ -77,20 +80,22 @@ function FeaturedProject({
       </Link>
       {/* github and external website links */}
       <div className="flex space-x-4">
-        <Link href={link}>
+        <Link href={githubLink}>
           <Icon
             name="github"
             className="hover:text-green cursor-pointer"
             size={22}
           />
         </Link>
-        <Link href={""}>
-          <Icon
-            name="external-link"
-            className="hover:text-green cursor-pointer"
-            size={22}
-          />
-        </Link>
+        {websiteLink.length > 0 && (
+          <Link href={websiteLink}>
+            <Icon
+              name="external-link"
+              className="hover:text-green cursor-pointer"
+              size={22}
+            />
+          </Link>
+        )}
       </div>
     </div>
   );

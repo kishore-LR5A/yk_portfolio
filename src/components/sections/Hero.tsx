@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Button from "../Button";
 
@@ -18,10 +19,17 @@ function Hero() {
         {/* I am a software engineer. */}I build things from end to end!
       </p>
       <p className="text-[14px] sm:text-[16px] mt-5 mb-10 [line-height:1.5] text-slate w-4/5 md:w-[65%]">
-        I&apos;m a software engineer specializing in building (and occasionally
-        designing) exceptional digital experiences. Currently, I&apos;m focused
-        on building accessible, human-centered products at{" "}
-        <span className="text-green">Google</span>.
+        I am a software engineer. I continuously try to adapt to new and future
+        proof technologies. I like the world of blockchain and deep learning. I
+        worked as a web3 developer intern at
+        <Link
+          href="https://www.linkedin.com/company/myriadco/"
+          className="text-green"
+        >
+          {" "}
+          Myriad
+        </Link>
+        .
       </p>
       <Button
         text="Check me in Github"
