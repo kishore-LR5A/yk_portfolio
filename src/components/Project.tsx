@@ -44,7 +44,7 @@ function Project({
           </h2>
 
           {/* description */}
-          <p className="text-14 sm:text-[16px] text-light_slate text-ellipsis">
+          <p className="text-14 sm:text-[16px] text-light_slate text-ellipsis leading-5">
             {description}
           </p>
         </div>
@@ -52,7 +52,7 @@ function Project({
       {/* tech stack */}
       <p className="flex flex-wrap ">
         {techStack.map((tech, idx) => (
-          <span key={idx} className="text-[12px] text-slate font-sf_mono pb-2 pl-2">
+          <span key={idx} className="text-[12px] text-slate font-sf_mono pb-2 pr-2">
             {tech}
           </span>
         ))}

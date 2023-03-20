@@ -8,9 +8,9 @@ function Footer() {
       <div className="flex flex-col justify-center items-center hover:text-green cursor-pointer">
         <p className="leading-[1.4]">
           Design inspired from{" "}
-          <Link href="https://brittanychiang.com/">Brittany Chiang</Link>
+          <Link href="https://brittanychiang.com/" className="underline">Brittany Chiang</Link>
         </p>
-        <p className="leading-[1.4]">with Next.js & TailwindCSS</p>
+        <p className="leading-[1.4]">Build with Next.js & TailwindCSS</p>
       </div>
     </footer>
   );

@@ -27,12 +27,12 @@ function MobileFeaturedProject({
         </p>
       </div>
       {/* project description */}
-      <p className="leading-[1.3]">{description}</p>
+      <p className="leading-5">{description}</p>
       <div>
         {/* project tech stack */}
-        <div className="flex space-x-2 flex-wrap space-y-1">
+        <div className="flex flex-wrap">
           {techStack.map((tech, idx) => (
-            <p key={idx} className="text-[14px] text-slate font-sf_mono">
+            <p key={idx} className="text-[14px] text-slate font-sf_mono pb-2 pr-2">
               {tech}
             </p>
           ))}
