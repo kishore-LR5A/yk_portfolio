@@ -31,24 +31,27 @@ function JobCard({
         <h2>{timespan}</h2>
       </div>
       {/* description */}
-      <ul className=" flex flex-col space-y-2">
+      <ul className="flex flex-col space-y-2">
         {description.map((desc, idx) => (
-          <div key={idx} className="flex space-x-3">
-            <Icon
-              key={idx}
-              name="triangle"
-              className="text-green rotate-90 w-[10px] h-[10px]"
-            />
+          <div key={idx} className="flex items-center space-x-3">
+            <div>
+              <Icon
+                key={idx}
+                name="triangle"
+                size={16}
+                className="text-green rotate-90 w-[10px] h-[10px]"
+              />
+            </div>
             <li className="leading-[1.3]">{desc}</li>
           </div>
         ))}
       </ul>
       {/* tech stack */}
-      <div className="text-lightest_slate text-[16px] flex flex-wrap space-y-1 space-x-2">
+      <div className="text-lightest_slate text-[16px] flex flex-wrap">
         {techStack.map((tech, idx) => (
           <span
             key={idx}
-            className="p-2 bg-dark_navy rounded-lg cursor-pointer hover:text-green hover:font-bold transition-all duration-300 ease-in-out"
+            className="p-2 bg-dark_navy rounded-lg cursor-pointer hover:text-green hover:font-bold mb-2 mr-2"
           >
             {tech}
           </span>

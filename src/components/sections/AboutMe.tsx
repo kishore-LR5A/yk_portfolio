@@ -36,12 +36,12 @@ function AboutMe() {
           <p className="leading-[1.3]">
             Here are a few technologies I&apos;ve been working with recently:
           </p>
-          <ul className="grid grid-cols-2 grid-rows-3 gap-x-3 gap-y-3 w-4/5 lg:w-3/5">
+          <ul className="grid grid-cols-2 grid-rows-3 gap-x-3 gap-y-3 w-4/5 lg:w-3/5 sm:text-sm md:text-md lg:text-lg">
             {techStack.map((item, idx) => (
               <Link
                 key={idx}
                 href={item.link}
-                className="cursor-pointer hover:text-green hover:underline underline-offset-2"
+                className="cursor-pointer hover:text-green hover:underline underline-offset-2 "
               >
                 <Icon
                   name="arrow-up-right"
@@ -68,17 +68,6 @@ function AboutMe() {
           </Link>
         </div>
       </div>
-      {/* <div className="text-green">
-        <h1 className="fluid-4xl">Fluid Typography @ 4XL</h1>
-        <h2 className="fluid-3xl">Fluid Typography @ 3XL</h2>
-        <h3 className="fluid-2xl">Fluid Typography @ 2XL</h3>
-        <h4 className="fluid-xl">Fluid Typography @ XL</h4>
-        <h5 className="fluid-lg">Fluid Typography @ LG</h5>
-        <h6 className="md:fluid-lg">Fluid Typography @ LG</h6>
-        <p className="fluid-base">Fluid Typography</p>
-        <p className="fluid-sm">Fluid Typography @ SM</p>
-        <small className="fluid-xs">Fluid Typography @ XS</small>
-      </div> */}
     </section>
   );
 }

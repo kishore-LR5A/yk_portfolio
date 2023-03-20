@@ -7,7 +7,7 @@ import Project, { ProjectProps } from "../Project";
 function Work() {
   // projects data
   const [projects, setProjects] = React.useState<ProjectProps[]>(
-    otherProjects.slice(0, 6)
+    otherProjects.slice(0, 3)
   );
   // show more projects button state
   const [showMore, setShowMore] = React.useState(false);
@@ -16,7 +16,7 @@ function Work() {
     if (showMore) {
       setProjects(otherProjects);
     } else {
-      setProjects(otherProjects.slice(0, 6));
+      setProjects(otherProjects.slice(0, 3));
     }
   }, [showMore]);
   // show more projects button click handler
