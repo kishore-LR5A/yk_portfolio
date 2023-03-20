@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import Button from "./Button";
 import NavLink from "./NavLink";
-import FeatherIcon from "feather-icons-react";
 import { useReduxSelector, useReduxDispatch } from "redux/hooks";
 import { toggleNav } from "redux/nav/navSlice";
 import Link from "next/link";
@@ -59,8 +58,8 @@ function Navbar() {
       </div>
       {/* mobile navbar */}
       <div className="pl-3 sm:hidden flex justify-between items-center space-x-5">
-        <FeatherIcon
-          icon="menu"
+        <Icon
+          name="menu"
           className="text-green w-8 h-8"
           onClick={toggleMobileNavbar}
         />
@@ -76,8 +75,8 @@ function Navbar() {
           onClick={toggleMobileNavbar}
         ></div>
         <div className="flex flex-col justify-center items-center h-full w-3/4 bg-dark_navy">
-          <FeatherIcon
-            icon="x"
+          <Icon
+            name="x"
             className="text-green absolute top-[25px] right-[50px] w-8 h-8"
             onClick={toggleMobileNavbar}
           />
