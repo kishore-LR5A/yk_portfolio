@@ -64,7 +64,7 @@ function Work() {
           <h1 className="fluid-xl text-lightest_slate font-calibri_bold">
             Other Noteworthy Projects
           </h1>
-          <p className="fluid-sm font-sf_mono text-green">view the archive</p>
+          {/* <p className="fluid-sm font-sf_mono text-green">view the archive</p> */}
         </div>
         {/* iterate over projects */}
         <div className="flex flex-col justify-center items-center space-y-6">

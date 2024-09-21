@@ -26,7 +26,7 @@ function AboutMe() {
           </p>
           <p className="leading-[1.3]">
             I am proficient in multiple programming languages, including
-            JavaScript, TypeScript, Python, Dart, C++, Solidity and Go. I am
+            JavaScript, TypeScript, Python, Dart, C++, Solidity and Rust. I am
             always eager to learn and explore new technologies, and I am
             confident that I can create amazing things with my skills and
             experience. I am excited to continue growing my career and making an
@@ -36,12 +36,13 @@ function AboutMe() {
           <p className="leading-[1.3]">
             Here are a few technologies I&apos;ve been working with recently:
           </p>
-          <ul className="grid grid-cols-2 grid-rows-3 gap-x-3 gap-y-3 w-4/5 lg:w-3/5 sm:text-sm md:text-md lg:text-lg">
+          <ul className="grid grid-cols-2 sm:grid-cols-3 grid-rows-3 gap-x-3 gap-y-3 w-4/5 lg:w-3/5 sm:text-sm md:text-md lg:text-lg">
             {techStack.map((item, idx) => (
               <Link
                 key={idx}
                 href={item.link}
-                className="cursor-pointer hover:text-green hover:underline underline-offset-2 "
+                className="cursor-pointer hover:text-green hover:underline underline-offset-2"
+                target="_blank"
               >
                 <Icon
                   name="arrow-up-right"
@@ -101,5 +102,30 @@ const techStack: TechStack[] = [
   {
     tech: "Solidity",
     link: "https://soliditylang.org/",
+  },
+  {
+    tech: "Rust",
+    link: "https://www.rust-lang.org/",
+  },
+  {
+    tech: "Axum",
+    link: "https://github.com/tokio-rs/axum",
+  },
+  {
+    tech: "Tauri v2",
+    link: "https://v2.tauri.app/",
+  },
+  // spring boot
+  {
+    tech: "Spring Boot",
+    link: "https://spring.io/projects/spring-boot",
+  },
+  {
+    tech: "Docker",
+    link: "https://www.docker.com/",
+  },
+  {
+    tech: "Kubernetes",
+    link: "https://kubernetes.io/",
   },
 ];

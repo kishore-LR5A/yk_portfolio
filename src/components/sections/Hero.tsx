@@ -29,7 +29,13 @@ function Hero() {
           {" "}
           Myriad
         </Link>
-        .
+        . Currently working as Technical Analyst at <Link
+          href="https://www.cunomial.com/en"
+          className="text-green"
+        >
+          {" "}
+          Cunomial Technologies
+        </Link>.
       </p>
       <Button
         text="Check me in Github"

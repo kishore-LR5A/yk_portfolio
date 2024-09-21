@@ -17,10 +17,14 @@ function Contact() {
           </h2>
         </div>
         <p className="xs:text-[14px] text-[20px] text-slate font-calibri text-center w-full sm:w-3/5 leading-[1.3] pb-10">
-          I&apos;m currently looking for a full-time positions in fullstack web2
-          and web3 developer roles. I am also active in mobile development with
+          {/* I&apos;m currently looking for full-time positions in fullstack web
+          and web3/blockchain developer roles. I am also active in mobile development with
           flutter. If you&apos;re interested in me, please contact
-          me at the email below.
+          me at the email below. */}
+          I&apos;m actively seeking full-time opportunities in fullstack web
+          development, Web3/blockchain roles, and mobile development using
+          Flutter. If you&apos;re interested in connecting, please feel free to
+          reach out via the email below.
         </p>
         {/* mail button */}
         <Link href="mailto:kishore.chodipilli@gmail.com" className="green-btn">

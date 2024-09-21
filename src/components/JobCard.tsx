@@ -22,9 +22,9 @@ function JobCard({
       <div className="flex flex-col space-y-2">
         {/* job title @ company */}
         <h1 className="text-lightest_slate text-[18px] sm:text-[22px] ">
-          {title}{" "}
+          {title} <span className="text-lightest_slate">@{" "}</span>
           <Link href={companyLink} className="text-green hover:underline ">
-            @ {company}
+          {company}
           </Link>
         </h1>
         {/* timespan */}
